@@ -35,7 +35,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between text-sm font-sans text-surface-dark-foreground/60">
           <p>© 2025 VastraLens. All rights reserved.</p>
           <div className="flex gap-6 mt-4 md:mt-0">
-            <a href="#" className="hover:text-primary transition-colors">
+            <a href="/privacy" className="hover:text-primary transition-colors">
               Privacy Policy
             </a>
             <a href="#" className="hover:text-primary transition-colors">

@@ -1,4 +1,4 @@
-// app/api/contact/route.ts
+  // app/api/contact/route.ts
 
 import { NextResponse } from 'next/server';
 import { google } from 'googleapis';
@@ -11,7 +11,7 @@ export async function POST(req: Request) {
     const clientEmail = process.env.GOOGLE_CLIENT_EMAIL;
     const privateKey = process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, '\n');
     const spreadsheetId = process.env.CONTACT_SHEET_ID;
-    const tabName = process.env.CONTACT_TAB_NAME || 'Sheet1';
+    const tabName = process.env.CONTACT_TAB_NAME || 'New_VL_Contact_US_Submission';
 
     if (!clientEmail || !privateKey || !spreadsheetId) {
       console.error('Missing Environment Variables:', {
@@ -80,8 +80,7 @@ export async function POST(req: Request) {
       if (sheetError.code === 404) {
         return NextResponse.json({ 
           success: false, 
-          message: `Google Sheets Resource Not Found.`,
-          details: `Please verify that: 1) The Spreadsheet ID "${spreadsheetId}" is correct and not truncated. 2) The tab name "${tabName}" exists exactly as written in the spreadsheet. 3) The service account "${clientEmail}" has 'Editor' access to the spreadsheet.`
+          message: `Sheet or Tab not found. Please verify: 1) Spreadsheet ID is correct. 2) Tab name "${tabName}" exists in the spreadsheet.` 
         }, { status: 404 });
       }
 
