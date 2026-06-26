@@ -1019,24 +1019,26 @@
                     </div>
                 </section>
 
-                <!-- Section: AI Engine -->
+                <!-- Section: AI Engine & Face Data -->
                 <section id="ai-tryon" class="policy-section">
-                    <h2><i data-lucide="cpu"></i>4. AI Try-On & Virtual Wardrobe Processing</h2>
-                    <p>One of VastraLens’ core features is the AI-driven Virtual Try-On model which allows you to visualize how garments look on you. We process these assets with extreme care for your privacy:</p>
+                    <h2><i data-lucide="cpu"></i>4. AI Try-On, Virtual Wardrobe & Face Data Policy</h2>
+                    <p>One of VastraLens’ core features is the AI-driven Virtual Try-On model which allows you to visualize how garments look on you. Because this feature uses your device's camera or photos, we maintain a strict policy regarding your images and Face Data:</p>
                     <ul>
-                        <li><strong>Image Processing:</strong> When you upload clothing items or a portrait, the images are securely transmitted to our backend API and AI-service running on private servers.</li>
-                        <li><strong>Background Isolation:</strong> Our AI pipeline isolates garments, removes backgrounds, and fits them to templates.</li>
-                        <li><strong>No Biometric Extraction:</strong> We do not perform biometric recognition, facial mapping, or permanent body measurement analysis. All processing is solely to overlay the garment on your photo.</li>
-                        <li><strong>Security of Assets:</strong> Your portrait and wardrobe images are stored securely on Firebase Storage under restrictive access rules. They are never shared, leased, or used to train public models.</li>
+                        <li><strong>Face Data Collection:</strong> When you use the Virtual Try-On feature, we may collect photos of you that include your face (Face Data). This data is collected solely when you explicitly upload a portrait or take a selfie for the try-on canvas.</li>
+                        <li><strong>Purpose of Face Data:</strong> Your Face Data is used exclusively to generate a personalized try-on image by overlaying garments onto your photo. We do not use this data for any other purpose.</li>
+                        <li><strong>No Biometric Extraction:</strong> We do not perform biometric recognition, facial mapping, or permanent body measurement analysis. It is never used to train public AI models.</li>
+                        <li><strong>Third-Party AI Service (Google Generative AI):</strong> To power our advanced Virtual Try-On generation and Body Shape Analysis, we securely transmit your uploaded photos (including Face Data and full-body images) to <strong>Google's Generative AI services (Gemini)</strong>. This data is transmitted securely via our backend and is processed exclusively to generate your personalized styling images. Google provides the same or equal protection of your data as outlined in this privacy policy, and we ask for your explicit consent within the app before sending any photos to this third-party AI service.</li>
+                        <li><strong>Face Data Retention:</strong> Your uploaded photos and generated try-on looks are stored securely on our Firebase Storage. They are retained only as long as you keep them saved in your account. If you delete a photo within the App, or if you delete your account entirely, all associated Face Data and images are immediately and permanently destroyed from our active servers.</li>
                     </ul>
                 </section>
 
                 <!-- Section: Third-Parties -->
                 <section id="third-parties" class="policy-section">
                     <h2><i data-lucide="share-2"></i>5. Third-Party Services and Infrastructure</h2>
-                    <p>We use trusted third-party providers to host the App infrastructure and analytics. These providers are bound by strict contractual clauses to ensure your data is kept secure and confidential:</p>
+                    <p>We use trusted third-party providers to host the App infrastructure, AI processing, and analytics. These providers are bound by strict contractual clauses to ensure your data is kept secure and confidential:</p>
                     <ul>
                         <li><strong>Firebase (Google):</strong> We use Firebase Authentication, Firestore Database, and Firebase Storage for user management and secure cloud syncing.</li>
+                        <li><strong>Google Generative AI (Gemini):</strong> We use Google's Generative AI API to analyze uploaded photos and generate virtual try-on images. The data sent to Google is processed securely and is not used to train their public models.</li>
                         <li><strong>Google Sign-In / Apple Sign-In:</strong> To facilitate passwordless, secure user logins.</li>
                         <li><strong>Backend API / AI Model Hosting:</strong> Hosted on private containerized infrastructure (e.g., Railway/AWS) with secure HTTPS/SSL endpoints.</li>
                         <li><strong>Analytics/Crash Reporting:</strong> We use standard, anonymous crash telemetry (such as Firebase Crashlytics) to detect app failures and optimize system stability.</li>
